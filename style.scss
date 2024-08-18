@@ -1,0 +1,53 @@
+@use "component" as *;
+
+.header{
+    padding: 0 20px;
+    position: relative;
+    background-image: url(images/mv-sp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    @media screen and (min-width: $breakPoint){
+        background-image: url(images/mv.png);
+        height: 800px;
+    }
+
+    & .title{
+        padding-top: 22px;
+        margin-bottom: 36px;
+        @media screen and (min-width: $breakPoint){
+            margin-bottom: 84px;
+        }
+    }
+
+    & .copy{
+        width: 210px;
+        @media screen and (min-width: $breakPoint){
+            width: 413px;
+        }
+    }
+
+
+
+    & .badge{
+        position: absolute;
+        top: 370px;
+        right: 16px;
+
+        & .badge-img{
+            width: 180px;
+            height: 180px;
+        }
+
+        @media screen and (min-width: $breakPoint){
+            top: 536px;
+            right: 28px;
+            & .badge-img{
+                width: 290px;
+                height: 290px;
+            }
+        }
+    }
+}
