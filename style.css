@@ -50,3 +50,99 @@
     height: 290px;
   }
 }
+
+.introduction {
+  padding: 72px 20px 0 20px;
+}
+.introduction__title {
+  margin-bottom: 37px;
+}
+.introduction__title .title-img {
+  margin: 0 auto;
+  width: 350px;
+}
+.introduction__subtitle {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2px;
+}
+.introduction__curriculum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.introduction__curriculum .w1, .introduction__curriculum .w2 {
+  width: 24%;
+}
+.introduction__curriculum .w1 .head, .introduction__curriculum .w2 .head {
+  position: relative;
+  width: 100%;
+  height: 23px;
+  background-color: #6D6D6D;
+  margin-bottom: 5.8px;
+}
+.introduction__curriculum .w1 .head .head-img, .introduction__curriculum .w2 .head .head-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24.5px;
+}
+.introduction__curriculum .w1 .body, .introduction__curriculum .w2 .body {
+  position: relative;
+  width: 100%;
+  height: 69px;
+  margin-bottom: 5.8px;
+  border: 1px solid #707070;
+}
+.introduction__curriculum .w1 .body .body-img, .introduction__curriculum .w2 .body .body-img {
+  position: absolute;
+  top: 10.5px;
+  left: 0;
+  padding-left: 14.5%;
+}
+.introduction__curriculum .w3-4 {
+  width: 48%;
+}
+.introduction__curriculum .w3-4 .head {
+  position: relative;
+  width: 100%;
+  height: 23px;
+  background-color: #6D6D6D;
+  margin-bottom: 5.8px;
+}
+.introduction__curriculum .w3-4 .head .head-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.introduction__curriculum .w3-4 .body {
+  position: relative;
+  width: 100%;
+  height: 69px;
+  margin-bottom: 5.8px;
+  border: 1px solid #707070;
+}
+.introduction__curriculum .w3-4 .body .body-img {
+  position: absolute;
+  top: 10.5px;
+  left: 0px;
+  padding-left: 8.8%;
+}
+.introduction__curriculum .QandA {
+  position: relative;
+  width: 100%;
+  height: 23px;
+  border: 1px solid #707070;
+}
+.introduction__curriculum .QandA .QandA-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  padding-left: 3.4%;
+}
