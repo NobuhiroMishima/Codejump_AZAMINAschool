@@ -54,6 +54,8 @@
 
 .introduction{
     padding: 72px 20px 0 20px;
+    margin: 0 auto;
+    max-width: $contentMaxWidth;
 
     &__title{
         margin-bottom: 37px;
@@ -61,6 +63,15 @@
         & .title-img{
             margin: 0 auto;
             width: 350px;
+        }
+
+        @media screen and (min-width: $breakPoint){
+            padding: 0 44px;
+            margin-bottom: 74.3px;
+
+            & .title-img{
+                width: 100%;
+            }
         }
     }
 
@@ -70,6 +81,10 @@
         font-weight: 600;
         text-align: center;
         margin-bottom: 2px;
+        @media screen and (min-width: $breakPoint){
+            font-size: 30px;
+            margin-bottom: 11px;
+        }
     }
 
     &__curriculum{
@@ -94,6 +109,12 @@
                     transform: translate(-50%, -50%);
                     width: 24.5px;
                 }
+                @media screen and (min-width: $breakPoint){
+                    height: 40px;
+                    & .head-img{
+                        width: 42px;
+                    }
+                }
                 
             }
 
@@ -109,6 +130,14 @@
                     top: 10.5px;
                     left: 0;
                     padding-left: 14.5%;
+                }
+
+                @media screen and (min-width: $breakPoint){
+                    height: 120px;
+                    & .body-img{
+                        top: 18.3px;
+                        width: calc(14.5% + 58.1px);
+                    }
                 }
                 
             }
@@ -129,6 +158,12 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
+                @media screen and (min-width: $breakPoint){
+                    height: 40px;
+                    & .head-img{
+                        width: 74px;
+                    }
+                }
                 
             }
 
@@ -144,6 +179,13 @@
                     top: 10.5px;
                     left: 0px;
                     padding-left: 8.8%;
+                }
+                @media screen and (min-width: $breakPoint){
+                    height: 120px;
+                    & .body-img{
+                        top: 18.3px;
+                        width: calc(8.8% + 209.5px);
+                    }
                 }
                 
             }
@@ -162,8 +204,146 @@
                 left: 0;
                 padding-left: 3.4%;
             }
+            @media screen and (min-width: $breakPoint){
+                height: 40px;
+                & .QandA-img{
+                    width: calc(3.4% + 474.5px);
+                }
+            }
 
 
         }
+        @media screen and (min-width: $breakPoint){
+            padding: 0 117px;
+        }
+    }
+}
+
+.course{
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: $contentMaxWidth;
+
+    &__title{
+        position: relative;
+        margin-bottom: 113.5px;
+
+        & .title-img{
+            margin: 0 auto;
+            width: 350px;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 71.5px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 180px;
+            height: 25.5px;
+            background-color: $cBlue;
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+
+        @media screen and (min-width: $breakPoint){
+            padding: 0 140px;
+            margin-bottom: 184px;
+
+            & .title-img{
+                width: 100%;
+            }
+
+            &::after{
+                top: 132px;
+                width: 341px;
+                height: 48px;
+            }
+        }
+    }
+
+    &__detail{
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: $breakPoint){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    &__group, &__online{
+        padding: 0 20px;
+
+        &__title{
+            position: relative;
+            width: 100%;
+            height: 137.4px;
+            margin: 0 auto 20px auto;
+
+            &__icon{
+                position: absolute;
+                top: -37.2px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 55.5px;
+            }
+
+            &__subtitle{
+                position: absolute;
+                top: 46.6px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &__title{
+                position: absolute;
+                top: 72px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &__img{
+            width: 100%;
+            margin: 0 auto 18px auto;
+            border-radius: 50%;
+        }
+
+        &__text{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 28.8px;
+            margin-bottom: 77.6px;
+        }
+        @media screen and (min-width: $breakPoint){
+            flex: 1;
+            padding: 0 40px;
+
+            &__title{
+                height: 168px;
+
+                &__icon{
+                    top: -45.4px;
+                    height: 68px;
+                }
+
+                &__subtitle{
+                    top: 57px;
+                    height: 16.6px;
+                }
+
+                &__title{
+                    top: 88px;
+                    height: 26.1px;
+                }
+            }
+        }
+    }
+
+    &__group__title{
+        background-color: $cRedBg;
+    }
+    &__online__title{
+        background-color: $cBlueBg;
     }
 }
