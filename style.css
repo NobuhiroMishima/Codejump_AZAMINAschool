@@ -327,12 +327,10 @@
   background-color: #0158A8;
 }
 
-.feature {
-  background-color: #45CCC4;
-}
 .feature__summary {
   position: relative;
   padding: 0 20px;
+  background-color: #45CCC4;
 }
 .feature__summary__title {
   position: absolute;
@@ -377,4 +375,87 @@
   .feature__summary__item {
     margin-bottom: 30px;
   }
+}
+.feature .curriculum {
+  padding-top: 50px;
+}
+.feature .curriculum__lineup {
+  padding: 0 20px;
+}
+.feature .curriculum__title {
+  margin-bottom: 25px;
+}
+.feature .curriculum__caption {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 40px;
+}
+.feature .curriculum__list__title {
+  font-size: 13px;
+  text-align: center;
+  background-color: #EB4E45;
+  color: white;
+  margin-bottom: 10px;
+}
+.feature .curriculum__list__img {
+  margin-bottom: 10px;
+}
+.feature .curriculum__list__body {
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+.feature .curriculum__more {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.feature .curriculum__more__text {
+  display: inline;
+  position: relative;
+  font-size: 14px;
+  color: black;
+}
+.feature .curriculum__more__text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -15.5px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+.feature .curriculum__intro {
+  background-color: #ECFCFB;
+  padding: 40px 20px 42px 20px;
+}
+.feature .curriculum__intro__title {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  padding: 13px 0;
+  margin-bottom: 25px;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.feature .curriculum__intro__detailimg {
+  margin-bottom: 30px;
+}
+.feature .curriculum__intro__pointimg {
+  margin-bottom: 20px;
+}
+.feature .curriculum__intro__pointtitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 17px;
+}
+.feature .curriculum__intro__pointbody {
+  font-size: 14px;
+  color: black;
+}
+.feature .curriculum__intro__pointbody strong {
+  background-color: #FFFF00;
 }

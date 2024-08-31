@@ -349,11 +349,12 @@
 }
 
 .feature{
-    background-color: $cBlue;
 
     &__summary{
         position: relative;
         padding: 0 20px;
+        background-color: $cBlue;
+
 
 
 
@@ -397,6 +398,100 @@
             margin-bottom: 10px;
             @media screen and (min-width:$breakPoint){
                 margin-bottom: 30px;
+            }
+        }
+    }
+
+    & .curriculum{
+        padding-top: 50px;
+
+        &__lineup{
+            padding: 0 20px;
+        }
+
+        &__title{
+            margin-bottom: 25px;
+        }
+        &__caption{
+            font-size: 14px;
+            color: $cBlack;
+            margin-bottom: 40px;
+        }
+        &__list{            
+            &__title{
+                font-size: 13px;
+                text-align: center;
+                background-color: $cRedBg;
+                color: $cWhite;
+                margin-bottom: 10px;
+            }
+            &__img{
+                margin-bottom: 10px;
+            }
+            &__body{
+                font-size: 12px;
+                margin-bottom: 40px;
+            }
+        }
+        &__more{
+            display: block;
+            text-align: center;
+            margin-bottom: 40px;
+
+            &__text{
+                display: inline;
+                position: relative;
+                font-size: 14px;
+                color: $cBlack;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -15.5px;
+                    transform: translateY(-50%) rotate(45deg);
+                    width: 7px;
+                    height: 7px;
+                    border-top: 1px solid $cBlack;
+                    border-right: 1px solid $cBlack;
+
+                }
+            }
+        }
+        &__intro{
+            background-color: $cLightblue;
+            padding: 40px 20px 42px 20px;
+            
+            &__title{
+                font-size: 14px;
+                font-weight: bold;
+                color: $cBlack;
+                padding: 13px 0;
+                margin-bottom: 25px;
+                text-align: center;
+                border-top: 1px solid $cBlack;
+                border-bottom: 1px solid $cBlack;
+            }
+
+            &__detailimg{
+                margin-bottom: 30px;
+            }
+            &__pointimg{
+                margin-bottom: 20px;
+            }
+            &__pointtitle{
+                font-size: 16px;
+                font-weight: bold;
+                color: black;
+                margin-bottom: 17px;
+            }
+            &__pointbody{
+                font-size: 14px;
+                color: black;
+
+                & strong{
+                    background-color: $cYellow;
+                }
             }
         }
     }
