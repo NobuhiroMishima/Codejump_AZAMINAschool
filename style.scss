@@ -1,5 +1,19 @@
 @use "component" as *;
 
+.visible-sp{
+    display: block;
+    @media screen and (min-width: $breakPoint){
+        display: none;
+    }
+}
+
+.visible-pc{
+    display: none;
+    @media screen and (min-width: $breakPoint){
+        display: block;
+    }
+}
+
 .header{
     padding: 0 20px;
     position: relative;
@@ -407,6 +421,8 @@
 
         &__lineup{
             padding: 0 20px;
+            max-width: $contentMaxWidth;
+            margin: 0 auto;
         }
 
         &__title{
@@ -416,8 +432,12 @@
             font-size: 14px;
             color: $cBlack;
             margin-bottom: 40px;
+            @media screen and (min-width:$breakPoint){
+                margin: 0 auto 40px auto;
+                text-align: center;
+            } 
         }
-        &__list{            
+        &__list{          
             &__title{
                 font-size: 13px;
                 text-align: center;
@@ -431,6 +451,30 @@
             &__body{
                 font-size: 12px;
                 margin-bottom: 40px;
+            }
+
+            &.normal{
+                @media screen and (min-width:$breakPoint){
+                    width: 380px;
+                    margin: 0 auto;
+                } 
+            }
+
+            &.row{
+                display: flex;
+                flex-direction: column;
+                @media screen and (min-width:$breakPoint){
+                    flex-direction: row;
+                    justify-content: space-between;
+                }  
+                & .wrap{
+                    @media screen and (min-width:$breakPoint){
+                        width: 380px;
+                    } 
+                    & .curriculum__list__body{
+                        padding: 0 20px;
+                } 
+                }
             }
         }
         &__more{
@@ -460,7 +504,12 @@
         }
         &__intro{
             background-color: $cLightblue;
-            padding: 40px 20px 42px 20px;
+            padding: 40px 20px;
+
+            & .wrap{
+                max-width: $contentMaxWidth;
+                margin: 0 auto;
+            }
             
             &__title{
                 font-size: 14px;
@@ -476,8 +525,31 @@
             &__detailimg{
                 margin-bottom: 30px;
             }
+
+            &__point{
+                display: flex;
+                flex-direction: column;
+                @media screen and (min-width:$breakPoint){
+                    flex-direction: row;
+                    justify-content: space-between;
+                }  
+            }
+
             &__pointimg{
                 margin-bottom: 20px;
+                @media screen and (min-width:$breakPoint){
+                    width: 260px;
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }  
+            }
+            &__pointdescription{
+                display: flex;
+                flex-direction: column;
+                @media screen and (min-width:$breakPoint){
+                    width: 522px;
+                    justify-content: center;
+                }  
             }
             &__pointtitle{
                 font-size: 16px;

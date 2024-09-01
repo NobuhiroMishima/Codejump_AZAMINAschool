@@ -1,3 +1,21 @@
+.visible-sp {
+  display: block;
+}
+@media screen and (min-width: 640px) {
+  .visible-sp {
+    display: none;
+  }
+}
+
+.visible-pc {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .visible-pc {
+    display: block;
+  }
+}
+
 .header {
   padding: 0 20px;
   position: relative;
@@ -381,6 +399,8 @@
 }
 .feature .curriculum__lineup {
   padding: 0 20px;
+  max-width: 880px;
+  margin: 0 auto;
 }
 .feature .curriculum__title {
   margin-bottom: 25px;
@@ -389,6 +409,12 @@
   font-size: 14px;
   color: black;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 640px) {
+  .feature .curriculum__caption {
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
 }
 .feature .curriculum__list__title {
   font-size: 13px;
@@ -403,6 +429,30 @@
 .feature .curriculum__list__body {
   font-size: 12px;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 640px) {
+  .feature .curriculum__list.normal {
+    width: 380px;
+    margin: 0 auto;
+  }
+}
+.feature .curriculum__list.row {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .feature .curriculum__list.row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 640px) {
+  .feature .curriculum__list.row .wrap {
+    width: 380px;
+  }
+}
+.feature .curriculum__list.row .wrap .curriculum__list__body {
+  padding: 0 20px;
 }
 .feature .curriculum__more {
   display: block;
@@ -428,7 +478,11 @@
 }
 .feature .curriculum__intro {
   background-color: #ECFCFB;
-  padding: 40px 20px 42px 20px;
+  padding: 40px 20px;
+}
+.feature .curriculum__intro .wrap {
+  max-width: 880px;
+  margin: 0 auto;
 }
 .feature .curriculum__intro__title {
   font-size: 14px;
@@ -443,8 +497,35 @@
 .feature .curriculum__intro__detailimg {
   margin-bottom: 30px;
 }
+.feature .curriculum__intro__point {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .feature .curriculum__intro__point {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .feature .curriculum__intro__pointimg {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 640px) {
+  .feature .curriculum__intro__pointimg {
+    width: 260px;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+.feature .curriculum__intro__pointdescription {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .feature .curriculum__intro__pointdescription {
+    width: 522px;
+    justify-content: center;
+  }
 }
 .feature .curriculum__intro__pointtitle {
   font-size: 16px;
