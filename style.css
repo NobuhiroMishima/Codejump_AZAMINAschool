@@ -345,10 +345,16 @@
   background-color: #0158A8;
 }
 
-.feature__summary {
-  position: relative;
-  padding: 0 20px;
+.feature .bg.blue {
   background-color: #45CCC4;
+}
+.feature .bg.lightblue {
+  background-color: #ECFCFB;
+}
+.feature__summary {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 880px;
 }
 .feature__summary__title {
   position: absolute;
@@ -477,8 +483,9 @@
   border-right: 1px solid black;
 }
 .feature .curriculum__intro {
-  background-color: #ECFCFB;
   padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 880px;
 }
 .feature .curriculum__intro .wrap {
   max-width: 880px;
@@ -545,9 +552,10 @@
   margin-bottom: 50px;
 }
 .feature .confidence__title {
-  margin-bottom: 25px;
   padding: 0 20px;
   max-width: 880px;
+  margin: 0 auto;
+  margin-bottom: 25px;
 }
 .feature .confidence__caption {
   font-size: 14px;
@@ -561,4 +569,95 @@
     margin: 0 auto 40px auto;
     text-align: center;
   }
+}
+.feature .teacher {
+  padding: 0 20px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.feature .teacher__title {
+  margin-bottom: 25px;
+}
+.feature .teacher__caption {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 640px) {
+  .feature .teacher__caption {
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+}
+.feature .teacher__intro__title {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  padding: 13px 0;
+  margin-bottom: 25px;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.feature .teacher__intro__body {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .feature .teacher__intro__body {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.feature .teacher__intro__item {
+  padding: 20px;
+  background-color: #F5F5F5;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 640px) {
+  .feature .teacher__intro__item {
+    width: 31%;
+  }
+}
+.feature .teacher__intro__item__subject {
+  display: inline;
+  background-color: #333333;
+  color: white;
+  font-size: 12px;
+  padding: 1px 8px 3px 8px;
+}
+.feature .teacher__intro__item__name {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 12px 0 14px 0;
+}
+.feature .teacher__intro__item__comment {
+  color: black;
+  font-size: 14px;
+}
+.feature .teacher__more {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.feature .teacher__more__text {
+  display: inline;
+  position: relative;
+  font-size: 14px;
+  color: black;
+}
+.feature .teacher__more__text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -15.5px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
 }
