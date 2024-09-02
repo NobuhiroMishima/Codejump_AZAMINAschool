@@ -567,4 +567,27 @@
             }
         }
     }
+
+    & .confidence{
+        padding-top: 50px;
+        margin-bottom: 50px;
+
+        &__title{
+            margin-bottom: 25px;
+            padding: 0 20px;
+            max-width: $contentMaxWidth;
+        }
+        &__caption{
+            font-size: 14px;
+            color: $cBlack;
+            margin-bottom: 40px;
+            padding: 0 20px;
+            max-width: $contentMaxWidth;
+            @media screen and (min-width:$breakPoint){
+                margin: 0 auto 40px auto;
+                text-align: center;
+            } 
+        }
+
+    }
 }
