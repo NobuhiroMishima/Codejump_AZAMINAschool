@@ -661,3 +661,75 @@
   border-top: 1px solid black;
   border-right: 1px solid black;
 }
+.feature .passed {
+  padding: 0 20px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.feature .passed__title {
+  margin-bottom: 25px;
+}
+.feature .passed__caption {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 640px) {
+  .feature .passed__caption {
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+}
+.feature .passed__graph {
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.feature .passed__intro__title {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  padding: 13px 0;
+  margin-bottom: 25px;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.feature .passed__intro__body {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .feature .passed__intro__body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.feature .passed__intro__item {
+  background-image: url(images/student-bg.png);
+  padding: 40px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  max-width: 400px;
+}
+.feature .passed__intro__item__img {
+  width: 45%;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.feature .passed__intro__item__name {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  padding: 5px 15px;
+  margin-bottom: 30px;
+}
+.feature .passed__intro__item__comment {
+  font-size: 13px;
+  text-align: start;
+}

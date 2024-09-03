@@ -695,5 +695,83 @@
         }
     }
 
+    & .passed{
+        padding: 0 20px;
+        max-width: $contentMaxWidth;
+        margin: 0 auto;
+
+        &__title{
+            margin-bottom: 25px;
+        }
+        &__caption{
+            font-size: 14px;
+            color: $cBlack;
+            margin-bottom: 40px;
+            @media screen and (min-width:$breakPoint){
+                margin: 0 auto 40px auto;
+                text-align: center;
+            } 
+        }
+        &__graph{
+            width: 600px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+        &__intro{
+            &__title{
+                font-size: 14px;
+                font-weight: bold;
+                color: $cBlack;
+                padding: 13px 0;
+                margin-bottom: 25px;
+                text-align: center;
+                border-top: 1px solid $cBlack;
+                border-bottom: 1px solid $cBlack;
+            }
+
+            &__body{
+                list-style: none;
+                padding-left: 0;
+                display: flex;
+                flex-direction: column;
+                @media screen and (min-width:$breakPoint){
+                    flex-direction: row;
+                    justify-content: space-between;
+                } 
+            }
+
+            &__item{
+                background-image: url(images/student-bg.png);
+                padding: 40px;
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                max-width: 400px;
+
+                &__img{
+                    width: 45%;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    margin-bottom: 30px;
+                }
+
+                &__name{
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: bold;
+                    background-color: $cWhite;
+                    padding: 5px 15px;
+                    margin-bottom: 30px;
+                }
+
+                &__comment{
+                    font-size: 13px;
+                    text-align: start;
+                }
+
+            }
+        }
+    }
+
 
 }
