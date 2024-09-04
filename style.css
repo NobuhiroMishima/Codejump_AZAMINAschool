@@ -1,3 +1,8 @@
+@charset "UTF-8";
+body {
+  font-family: "游ゴシック", sans-serif;
+}
+
 .visible-sp {
   display: block;
 }
@@ -315,6 +320,11 @@ strong {
   margin: 0 auto 18px auto;
   border-radius: 50%;
 }
+@media screen and (min-width: 640px) {
+  .course__group__img, .course__online__img {
+    width: 280px;
+  }
+}
 .course__group__text, .course__online__text {
   font-size: 16px;
   font-weight: 700;
@@ -349,6 +359,9 @@ strong {
   background-color: #0158A8;
 }
 
+.feature .bg {
+  position: relative;
+}
 .feature .bg.blue {
   background-color: #45CCC4;
 }
@@ -571,6 +584,14 @@ strong {
     text-align: center;
   }
 }
+@media screen and (min-width: 640px) {
+  .feature .confidence__img {
+    height: 600px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .feature .teacher {
   padding: 0 20px;
   max-width: 880px;
@@ -709,12 +730,16 @@ strong {
   }
 }
 .feature .passed__intro__item {
-  background-image: url(images/student-bg.png);
+  background-image: url(images/student-bg-resize.png);
+  background-repeat: repeat;
   padding: 40px;
   text-align: center;
-  margin: 0 auto;
   margin-bottom: 50px;
-  max-width: 400px;
+}
+@media screen and (min-width: 640px) {
+  .feature .passed__intro__item {
+    width: 47.6%;
+  }
 }
 .feature .passed__intro__item__img {
   width: 45%;
@@ -837,19 +862,31 @@ strong {
 .feature .follow__messagebody {
   font-size: 14px;
   color: black;
-  margin-bottom: 72px;
+  padding-bottom: 122px;
 }
 @media screen and (min-width: 640px) {
   .feature .follow__messagebody {
-    margin: 0 auto 72px auto;
+    padding-bottom: 146px;
+    margin: 0 auto;
     text-align: center;
   }
 }
 
 .footer {
+  opacity: 0;
   display: flex;
-  max-width: 880px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   margin: 0 auto;
+  transition: opacity 0.4s;
+}
+@media screen and (min-width: 640px) {
+  .footer {
+    width: 880px;
+  }
 }
 .footer .btn {
   width: 50%;
@@ -917,4 +954,7 @@ strong {
   .footer .btn .btn-message.contact::after {
     right: calc(50% - 62px);
   }
+}
+.footer.active {
+  opacity: 1;
 }

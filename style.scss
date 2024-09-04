@@ -325,6 +325,10 @@ strong{
             width: 100%;
             margin: 0 auto 18px auto;
             border-radius: 50%;
+            @media screen and (min-width: $breakPoint){
+                width: 280px;
+            }
+            
         }
 
         &__text{
@@ -369,6 +373,8 @@ strong{
 .feature{
 
     & .bg{
+        position: relative;
+
         &.blue{
             background-color: $cBlue;
         }
@@ -596,6 +602,13 @@ strong{
                 text-align: center;
             } 
         }
+        &__img{
+            @media screen and (min-width:$breakPoint){
+                height: 600px;
+                width: 100%;
+                object-fit: cover;
+            } 
+        }
     }
 
     & .teacher{
@@ -741,12 +754,14 @@ strong{
             }
 
             &__item{
-                background-image: url(images/student-bg.png);
+                background-image: url(images/student-bg-resize.png);
+                background-repeat: repeat;
                 padding: 40px;
                 text-align: center;
-                margin: 0 auto;
                 margin-bottom: 50px;
-                max-width: 400px;
+                @media screen and (min-width:$breakPoint){
+                    width: 47.6%;
+                } 
 
                 &__img{
                     width: 45%;
@@ -877,9 +892,10 @@ strong{
         &__messagebody{
             font-size: 14px;
             color: $cBlack;
-            margin-bottom: 72px;
+            padding-bottom: 122px;
             @media screen and (min-width:$breakPoint){
-                margin: 0 auto 72px auto;
+                padding-bottom: 146px;
+                margin: 0 auto;
                 text-align: center;
             } 
         }
@@ -887,73 +903,89 @@ strong{
 
 }
 
+
 .footer{
+    opacity: 0;
     display: flex;
-    max-width: $contentMaxWidth;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     margin: 0 auto;
+    transition: opacity 0.4s;
+    @media screen and (min-width:$breakPoint){
+        width: $contentMaxWidth;
+    } 
 
-    & .btn{
-        width: 50%;
-        height: 52px;
-        text-decoration: none;
-        background-color: $cBlue;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border: 1px solid $cWhite;
-        @media screen and (min-width:$breakPoint){
-            height: 76px;
-        }
-
-        & .btn-message{
-            position: relative;
-            transform: translateY(18px);
-            line-height: 16px;
-            font-size: 16px;
-            font-weight: bold;
-            color: $cWhite;
-            position: relative;
-            text-align: center;
-            padding-right: 16px;
+        & .btn{
+            width: 50%;
+            height: 52px;
+            text-decoration: none;
+            background-color: $cBlue;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border: 1px solid $cWhite;
             @media screen and (min-width:$breakPoint){
-                transform: translateY(30px);
-                line-height: 20px;
-                font-size: 20px;
-                padding-right: 30px;
+                height: 76px;
             }
-            &::after{
-                content: '';
-                position: absolute;
-                display: block;
-                top: 8px;
-                transform: translateY(-50%) rotate(45deg);
-                width: 8px;
-                height: 8px;
-                border-top: 2px solid $cWhite;
-                border-right: 2px solid $cWhite;
+    
+            & .btn-message{
+                position: relative;
+                transform: translateY(18px);
+                line-height: 16px;
+                font-size: 16px;
+                font-weight: bold;
+                color: $cWhite;
+                position: relative;
+                text-align: center;
+                padding-right: 16px;
                 @media screen and (min-width:$breakPoint){
-                    top: 10px;
-                    width: 12px;
-                    height: 12px;
+                    transform: translateY(30px);
+                    line-height: 20px;
+                    font-size: 20px;
+                    padding-right: 30px;
                 }
-
-            }
-
-            &.free{
                 &::after{
-                    right: calc(50% - 38px);
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: 8px;
+                    transform: translateY(-50%) rotate(45deg);
+                    width: 8px;
+                    height: 8px;
+                    border-top: 2px solid $cWhite;
+                    border-right: 2px solid $cWhite;
                     @media screen and (min-width:$breakPoint){
-                        right: calc(50% - 42px);
+                        top: 10px;
+                        width: 12px;
+                        height: 12px;
+                    }
+    
+                }
+    
+                &.free{
+                    &::after{
+                        right: calc(50% - 38px);
+                        @media screen and (min-width:$breakPoint){
+                            right: calc(50% - 42px);
+                        }
                     }
                 }
-            }
-            &.contact{
-                &::after{
-                    right: calc(50% - 52px);
-                    @media screen and (min-width:$breakPoint){
-                        right: calc(50% - 62px);
+                &.contact{
+                    &::after{
+                        right: calc(50% - 52px);
+                        @media screen and (min-width:$breakPoint){
+                            right: calc(50% - 62px);
+                        }
                     }
                 }
             }
         }
+
+        
+    &.active{
+        opacity: 1;
     }
+
 }
