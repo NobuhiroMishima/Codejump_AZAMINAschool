@@ -36,6 +36,8 @@ strong{
         padding-top: 22px;
         margin-bottom: 36px;
         @media screen and (min-width: $breakPoint){
+            padding-top: 26px;
+            padding-left: 24px;
             margin-bottom: 84px;
         }
     }
@@ -43,6 +45,7 @@ strong{
     & .copy{
         width: 210px;
         @media screen and (min-width: $breakPoint){
+            padding-left: 24px;
             width: 413px;
         }
     }
@@ -74,9 +77,12 @@ strong{
     padding: 72px 20px 0 20px;
     margin: 0 auto;
     max-width: $contentMaxWidth;
+    @media screen and (min-width: $breakPoint){
+        padding-top: 90px;
+    }
 
     &__title{
-        margin-bottom: 37px;
+        margin-bottom: 40.4px;
 
         & .title-img{
             margin: 0 auto;
@@ -85,7 +91,7 @@ strong{
 
         @media screen and (min-width: $breakPoint){
             padding: 0 44px;
-            margin-bottom: 74.3px;
+            margin-bottom: 80.3px;
 
             & .title-img{
                 width: 100%;
@@ -96,12 +102,13 @@ strong{
     &__subtitle{
         color: $cBlack;
         font-size: 18px;
-        font-weight: 600;
+        line-height: 18px;
         text-align: center;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         @media screen and (min-width: $breakPoint){
             font-size: 30px;
-            margin-bottom: 11px;
+            line-height: 30px;
+            margin-bottom: 15px;
         }
     }
 
@@ -110,6 +117,9 @@ strong{
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 40px;
+        @media screen and (min-width: $breakPoint){
+            margin-bottom: 80px;
+        }
 
         & .w1, .w2{
             width: 24%;
@@ -118,7 +128,7 @@ strong{
                 width: 100%;
                 height: 23px;
                 background-color: $cTableBg;
-                margin-bottom: 5.8px;
+                margin-bottom: 6px;
 
                 & .head-img{
                     position: absolute;
@@ -140,7 +150,7 @@ strong{
                 position: relative;
                 width: 100%;
                 height: 69px;
-                margin-bottom: 5.8px;
+                margin-bottom: 6px;
                 border: 1px solid $cTableBorder;
 
                 & .body-img{
@@ -168,7 +178,7 @@ strong{
                 width: 100%;
                 height: 23px;
                 background-color: $cTableBg;
-                margin-bottom: 5.8px;
+                margin-bottom: 6px;
 
                 & .head-img{
                     position: absolute;
@@ -189,7 +199,7 @@ strong{
                 position: relative;
                 width: 100%;
                 height: 69px;
-                margin-bottom: 5.8px;
+                margin-bottom: 6px;
                 border: 1px solid $cTableBorder;
 
                 & .body-img{
@@ -238,13 +248,16 @@ strong{
 }
 
 .course{
-    padding: 0 20px;
+    padding: 0 20px 2.14px 20px;
     margin: 0 auto;
     max-width: $contentMaxWidth;
+    @media screen and (min-width: $breakPoint){
+        padding-bottom: 62.14px;
+    }
 
     &__title{
         position: relative;
-        margin-bottom: 113.5px;
+        margin-bottom: 113.3px;
 
         & .title-img{
             margin: 0 auto;
@@ -296,7 +309,7 @@ strong{
             position: relative;
             width: 100%;
             height: 137.4px;
-            margin: 0 auto 20px auto;
+            margin: 0 auto 20.4px auto;
 
             &__icon{
                 position: absolute;
@@ -322,20 +335,17 @@ strong{
         }
 
         &__img{
-            width: 100%;
-            margin: 0 auto 18px auto;
+            width: 280px;
+            margin: 0 auto 20px auto;
             border-radius: 50%;
-            @media screen and (min-width: $breakPoint){
-                width: 280px;
-            }
-            
         }
 
         &__text{
             font-size: 16px;
-            font-weight: 700;
+            font-weight: bold;
+            color: $cBlack;
             line-height: 28.8px;
-            margin-bottom: 77.6px;
+            margin-bottom: 77.86px;
         }
         @media screen and (min-width: $breakPoint){
             flex: 1;
@@ -401,16 +411,17 @@ strong{
         }
 
         &__caption{
-            padding-top: 83px;
-            margin-bottom: 48px;
+            padding-top: 85px;
+            margin-bottom: 50px;
             font-size: 19px;
             font-weight: 700;
+            line-height: 21px;
             color: $cBlack;
             text-align: center;
             letter-spacing: 8%;
 
             @media screen and (min-width:$breakPoint){
-                padding-top: 97px;
+                padding-top: 100px;
                 font-size: 24px;
             }
         }
@@ -456,6 +467,8 @@ strong{
         &__list{          
             &__title{
                 font-size: 13px;
+                padding: 2px 0;
+                line-height: 13px;
                 text-align: center;
                 background-color: $cRedBg;
                 color: $cWhite;
@@ -466,6 +479,7 @@ strong{
             }
             &__body{
                 font-size: 12px;
+                color: $cBlack;
                 margin-bottom: 40px;
             }
 
@@ -531,6 +545,7 @@ strong{
             &__title{
                 font-size: 14px;
                 font-weight: bold;
+                line-height: 14px;
                 color: $cBlack;
                 padding: 13px 0;
                 margin-bottom: 25px;
@@ -541,6 +556,9 @@ strong{
 
             &__detailimg{
                 margin-bottom: 30px;
+                @media screen and (min-width:$breakPoint){
+                    margin-bottom: 20px;
+                }  
             }
 
             &__point{
@@ -570,9 +588,15 @@ strong{
             }
             &__pointtitle{
                 font-size: 16px;
+                line-height: 16px;
                 font-weight: bold;
                 color: black;
                 margin-bottom: 17px;
+                @media screen and (min-width:$breakPoint){
+                    font-size: 17px;
+                    line-height: 17px;
+                    margin-bottom: 20px;
+                }  
             }
             &__pointbody{
                 font-size: 14px;
@@ -631,6 +655,7 @@ strong{
         &__intro{
             &__title{
                 font-size: 14px;
+                line-height: 14px;
                 font-weight: bold;
                 color: $cBlack;
                 padding: 13px 0;
@@ -684,7 +709,7 @@ strong{
         &__more{
             display: block;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
 
             &__text{
                 display: inline;
@@ -733,6 +758,7 @@ strong{
         &__intro{
             &__title{
                 font-size: 14px;
+                line-height: 14px;
                 font-weight: bold;
                 color: $cBlack;
                 padding: 13px 0;
@@ -816,6 +842,7 @@ strong{
 
             &__title{
                 font-size: 14px;
+                line-height: 14px;
                 font-weight: bold;
                 color: $cBlack;
                 padding: 13px 0;
@@ -842,6 +869,7 @@ strong{
                 position: relative;
                 font-size: 16px;
                 line-height: 16px;
+                color: $cBlack;
                 font-weight: bold;
                 padding-left: 13%;
                 margin-bottom: 20px;
@@ -876,11 +904,12 @@ strong{
             }
         }
         &__messageimg{
-            margin-bottom: 48px;
+            margin-bottom: 50px;
         }
 
         &__messagetitle{
             font-size: 17px;
+            line-height: 17px;
             font-weight: bold;
             color: $cBlack;
             margin-bottom: 32px;
